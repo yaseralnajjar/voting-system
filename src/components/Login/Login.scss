@@ -1,0 +1,18 @@
+#login-page{
+  
+  background: #fff;
+
+  .login-container{
+    height: calc(100vh - 56px);
+  }
+ 
+}
+.bankid-logo{
+  height: 46px;
+}
+.btn-flexbox{
+  align-self: flex-end;
+  .v-btn{
+    width: 95%;
+   }
+}

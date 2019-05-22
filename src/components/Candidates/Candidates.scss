@@ -1,0 +1,14 @@
+#candidates-page{
+  
+  background: #fff;
+
+  .candidates-card{
+      text-align: left;
+    
+  }
+
+  .candidates-card__img img{
+    object-fit: cover;
+    height: 120px;
+  }
+}
