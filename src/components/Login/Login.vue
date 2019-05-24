@@ -15,13 +15,12 @@
       </v-flex>
 
       <v-flex class="pa-3" xs12>
-        <v-select :items="items" label="Login with" color="teal"></v-select>
+        <v-select :items="items" label="Login with" color="teal" @change="validate" v-model="loginWith" required></v-select>
       </v-flex>
 
       <v-flex xs12 class="btn-flexbox">
-        <v-btn color="teal" @click="loginVerification" dark depressed large>Continue</v-btn>
+        <v-btn color="teal" @click="loginVerification" :dark="valid" :disabled="!valid" depressed large>Continue</v-btn>
       </v-flex>
-
     </v-layout>
   </v-container>
 
@@ -47,14 +46,18 @@
           <v-flex class="pa-3" xs12>
             <img src="../../assets/login/bankid.png" class="bankid-logo" alt="BankID">
           </v-flex>
-
             <v-flex class="pa-3" xs12>
-              <v-text-field :counter="13" label="Enter your 13-digit ID Number" required></v-text-field>
-              <v-text-field type="password" label="Password" required></v-text-field>
+              <v-text-field color="teal" :counter="13" label="Enter your 13-digit ID Number" v-model="bankIdNumber" required @keyup="enableBtn"></v-text-field>
+              <v-text-field color="teal" type="password" label="Password" v-model="bankIdPass" required @keyup="enableBtn" ></v-text-field>
+
+              <div v-if="snackbar" class="snackbar">
+                  <v-icon left color="white">warning</v-icon>{{snackbarText}}
+              </div>
+
             </v-flex>
 
             <v-flex xs12 class="btn-flexbox">
-              <v-btn color="teal" to="/elections" dark depressed large>
+              <v-btn color="teal" @click="validateBankId" :dark="disable" :disabled="!disable" depressed large>
                 Login
               </v-btn>
             </v-flex>
@@ -64,6 +67,8 @@
 
     </v-card>
   </v-dialog>
+
+
 
 </v-content>
 </template>

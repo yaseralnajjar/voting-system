@@ -1,23 +1,6 @@
-#home-page{
+#results-page{
   
   background: #fafafa;
-
-
-  .header{
-    height: 180px;
-    width: 100%;
-    background: teal;
-    overflow: hidden;
-    position: relative;
-    img{
-      position: absolute;
-      right: 0;
-      left: 0;
-      top: 30px;
-      margin: auto;
-    }  
-  }
-
 
   .v-item-group.v-bottom-nav{
     box-shadow: none;
@@ -48,13 +31,29 @@
       z-index: 8;
       border-radius: 15px;
       width: 90%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
     
     .logo{
       font-size: 32px;
-      margin: 0px auto 60px;
-      color: teal;
+      margin: 0px auto 80px;
+      color: #000;
+      text-transform: uppercase;
     }
+  }
+
+  .candidates-card__img img{
+    object-fit: cover;
+    height: 90px;
+    border-radius: 12px;
+  }
+  .voteRate{
+    background: #fafafa;
+    width: 100%;
+    margin-top: 12px;
+    padding: 5px 10px;
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 3px;
   }
 }

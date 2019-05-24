@@ -7,6 +7,13 @@
 </template>
 
 <style lang="scss">
+html{
+  background: #fafafa;
+}
+body{
+  max-width: 600px;
+  margin: 0 auto;
+}
 #app {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
